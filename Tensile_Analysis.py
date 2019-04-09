@@ -1,9 +1,9 @@
 import pandas as pd
 import re
-import csv
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
+from scipy import stats
 
 '''set cross-sectional area'''
 area = 19.2 #cm^2
@@ -11,7 +11,7 @@ area = 19.2 #cm^2
 g_len = 25 #mm
 
 '''get file locations of the raw .dat file'''
-file = '/Users/ICCAE1/Documents/programming/stress_strain/data/Specimen_RawData_1.csv'
+file = 'data/Specimen_RawData_1.csv'
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
@@ -120,5 +120,18 @@ ax = data.iloc[correctedminrange:maxrange].plot(y='Load', x='Extension')
 
 '''plotting trendline for corrected load vs Extension'''
 sns.lmplot(y='Load', x='Extension', data = data[correctedminrange:maxrange],fit_reg=True)
+
+
+# get coeffs of linear fit
+slope, intercept, r_value, p_value, std_err = stats.linregress(data.iloc[correctedminrange:maxrange]['Extension'], data.iloc[correctedminrange:maxrange]['Load'])
+
+print(slope)
+print(intercept)
+print(r_value)
+print(p_value)
+print(std_err)
+
+# plot legend
+ax.legend()
 
 plt.show()
