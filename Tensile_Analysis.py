@@ -119,8 +119,7 @@ maxrange = data['smoothtoo'].idxmin()
 ax = data.iloc[correctedminrange:maxrange].plot(y='Load', x='Extension')
 
 '''plotting trendline for corrected load vs Extension'''
-sns.lmplot(y='Load', x='Extension', data = data[correctedminrange:maxrange],fit_reg=True)
-
+sns.lmplot(y='Load', x='Extension', data = data,fit_reg=False)
 
 # get coeffs of linear fit
 slope, intercept, r_value, p_value, std_err = stats.linregress(data.iloc[correctedminrange:maxrange]['Extension'], data.iloc[correctedminrange:maxrange]['Load'])
@@ -133,5 +132,14 @@ print(std_err)
 
 # plot legend
 ax.legend()
+
+y_plot = slope* data.iloc[correctedminrange:maxrange]['Extension'] + intercept
+
+plt.plot(data.iloc[correctedminrange:maxrange]['Extension'], y_plot, color='r')
+
+
+#data['Extension_corrected'] = data['Extension'] + intercept
+
+#sns.lmplot(y='Load', x='Extension_corrected')
 
 plt.show()
