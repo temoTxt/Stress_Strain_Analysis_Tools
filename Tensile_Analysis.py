@@ -11,7 +11,7 @@ area = 42.6 #mm^2
 g_len = 25 #mm
 
 '''get file locations of the raw .dat file'''
-file = '/Users/ICCAE1/Documents/programming/Stress_Strain_Analysis_Tools/data/Specimen_RawData_1.csv'
+file = '/data/Specimen_RawData_1.csv'
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
