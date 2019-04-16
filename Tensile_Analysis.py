@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import seaborn as sns
 from scipy import stats
+import difflib
 
 
 '''set cross-sectional area based on specimen type'''
@@ -13,7 +14,6 @@ g_len = 50 #mm
 
 '''get excel files with raw data, stress, strain for plotting and vlookup use'''
 file = 'data/low_high_4545_typei_monotonic_r06.xls'
-file_vlookup = 'data/low_high_4545_typei_monotonic_r06_vlookup.xls'
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
@@ -127,7 +127,7 @@ print('The Max Stress is {} MPa'.format(strength))
 #data.plot(y='smooth', x='Extension')
 
 '''plot Stress vs. Strain'''
-#data.plot(y='Force', x='Extension')
+data.plot(y='Stress', x='Strain')
 
 '''defining ax variable to be corrrected midrange vs maxrange'''
 #ax = data.iloc[50:80].plot(y='Force', x='Displacement')
@@ -139,7 +139,7 @@ sns.lmplot(y='Stress', x='Strain', data = data,fit_reg=False)
 
 # get coeffs of linear fit
 slope, intercept, r_value, p_value, std_err = stats.linregress(data.iloc[100:600]['Strain'], data.iloc[100:600]['Stress'])
-print(data.iloc[100:600]['Strain'])
+#print(data.iloc[100:600]['Strain'])
 #print(slope)
 print('The Elastic Modulus is {}'.format(slope))
 #print(intercept)
@@ -152,17 +152,11 @@ print('The P-Value is {}'.format(p_value))
 print('The Standard Error is {}'.format(std_err))
 
 
-'''plotting trendline for raw data as stress v. strain'''
-#sns.lmplot(y='Stress', x='Strain', data = data,fit_reg=False)
+y_plot = slope* (data[0:600]['Strain']) + intercept
 
-# plot legend
-#ax.legend()
+plt.plot(data[0:600]['Strain'], y_plot, color='r')
 
-y_plot = slope* (data.iloc[0:600]['Strain']) + intercept
-
-plt.plot(data.iloc[0:600]['Strain'], y_plot, color='r')
-
-plt.show()
+#plt.show()
 
 '''Toe Compensated Strain that shifts the Stress/strain curve to the left - set y_plot = 0 and solve for x = intercept/slope'''
 TC_offset =-intercept/slope
@@ -174,7 +168,7 @@ data['TCStrain_nonneg'] = data['TCStrain'][data['TCStrain']>=0]
 print(data['TCStrain_nonneg'])
 
 '''Export Stress, Strain, and TCStrain_nonneg columns into new dataframe'''
-tc_col_name=['TCStrain', 'TCStrain_nonneg']
+tc_col_name=['TCStrain', 'TCStrain_nonneg', 'RawStrain']
 tcdata = pd.DataFrame(data, columns=tc_col_name)
 
 '''change the data from being a string to a float datatype'''
@@ -186,24 +180,72 @@ print(tcdata.head())
 tcdata = tcdata.apply(lambda x: pd.Series(x.dropna().values))
 print(tcdata.head())
 
-'''rename tcdata column names'''
-tcdata.columns=['TCStrain', 'Strain']
+'''This Strain will be the lookup column to match to the vlookup Strain column.  Need to add back TC_Offset'''
+tcdata['RawStrain'] = tcdata['TCStrain_nonneg'] + TC_offset
 print(tcdata.head())
 
-'''Read the vlookup excel file created from dat_file_cleaning.py so we can find the TC Stress values'''
-vlookup = pd.read_excel(file_vlookup)
-print(vlookup.head())
+'''rename tcdata column names'''
+tcdata.columns=['TCStrain_with_neg', 'TCStrain', 'Strain']
+print(tcdata.head())
+
+'''create vlookup dataframe'''
+vl_col_name=['Strain', 'Stress']
+vlookup = pd.DataFrame(data, columns=vl_col_name)
 
 '''change the data from being a string to a float datatype'''
 vlookup = vlookup.astype(float)
-
-'''everything works up to this point'''
+#print(vlookup['Stress'])
+#print(vlookup.iloc[50:80])
 
 '''performs a vlookup to match the raw data strain to the TCStrain_nonneg and return the rawdata stress to the TCStress column'''
-#tcstressdata = pd.merge_asof(vlookup, tcdata, left_on='Strain', right_on='TCStrain_nonneg', direction='nearest')
-#index=vlookup['Strain']
-#new_index=tcdata['TCStrain_nonneg']
-tcstressdata = vlookup.reindex_like(tcdata)
-print(tcstressdata.head())
+tcstressdata = tcdata.merge(vlookup, on='Strain', how='left')
+print(tcstressdata.iloc[0:10])
 
+tcstress_col_name=['TCStrain', 'Stress']
+tccurvedata = pd.DataFrame(tcstressdata, columns=tcstress_col_name)
+
+'''change the data from being a string to a float datatype'''
+tccurvedata = tccurvedata.astype(float)
+print(tccurvedata.head())
+
+'''plot Stress vs. Strain'''
+tccurvedata.plot(y='Stress', x='TCStrain')
+
+#plt.show()
+
+'''everything up to this point works'''
+
+tccurvedata.to_excel('data/'+file_name+'_tccurve.xls')
+
+'''now let's plot the TC Stress v. TC Strain'''
+#sns.lmplot(y='Stress', x='TCStrain', data = tccurvedata,fit_reg=False)
+
+
+# get coeffs of linear fit of the toe compensated elastic region
+#tc_slope, tc_intercept, tc_r_value, tc_p_value, tc_std_err = stats.linregress(tccurvedata.iloc[100:800]['TCStrain'], tccurvedata.iloc[100:800]['Stress'])
+#print(tccurvedata.iloc[100:600]['TCStrain'])
+#print(slope)
+#print('The Elastic Modulus is {}'.format(tc_slope))
+#print(intercept)
+#print('The unshifted y-intercept is {}'.format(tc_intercept))
+#print(r_value)
+#print('The R-Value is {}'.format(tc_r_value))
+#print(p_value)
+#print('The P-Value is {}'.format(tc_p_value))
+#print(std_err)
+#print('The Standard Error is {}'.format(tc_std_err))
+
+
+#plotting trendline for raw data as stress v. strain
+#sns.lmplot(y='Stress', x='Strain', data = data,fit_reg=False)
+
+# plot legend
+#ax.legend()
+
+#tc_y_plot = tc_slope* (tcstressdata.iloc[0:800]['TCStrain']) + tc_intercept
+
+#plt.plot(tcstressdata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
+
+
+#plt.show()
 

@@ -93,4 +93,3 @@ data.plot(y='Stress', x='Strain')
 #plt.show()
 
 data.to_excel('data/'+file_name+'.xls')
-data.to_excel('data/'+file_name+'_vlookup.xls')
