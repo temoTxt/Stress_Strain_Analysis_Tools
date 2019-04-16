@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 import os
 
 '''set cross-sectional area'''
-area = 19.2 #cm^2
+area = 41.6 #cm^2
 '''gauge length'''
-g_len = 25 #mm
+g_len = 50 #mm
 '''get file locations of the raw .dat file'''
-file = 'data\\0.3302solid_typei_95%uts_0.25hz_r01.dat'
+file = 'data/low_high_4545_typei_monotonic_r06.csv'
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
@@ -48,7 +48,7 @@ for line in lines:
             clean_data.append(line)
 
 '''create list of column titles'''
-col_name = ['Force', 'Displacement', 'Time', 'Count']
+col_name = ['Displacement', 'Force', 'Time']
 
 '''create pandas dataframe with the cleaned data'''
 data = pd.DataFrame(clean_data, columns=col_name)
@@ -75,13 +75,17 @@ print(min['Force'])
 #data = data.loc[(data['Force'] > min['Force']) & (data['Force'] < max['Force'])]
 
 '''try to take out the data after the specimen has broken'''
-data = data[0:-75]
+#data = data[0:-75]
 
 '''Stress calculation'''
 data['Stress'] = data['Force'] / area
 
+'''Normalize the Displacement'''
+data['NormalDisplacement']= data['Displacement']-data.iloc[0]['Displacement']
+
 '''Strain Calculation'''
-data['Strain'] = data['Displacement'] / g_len
+data['Strain'] = data['NormalDisplacement'] / g_len
+print(data['Strain'])
 
 '''plot Force vs. Displacement'''
 data.plot(y='Force', x = 'Displacement')
@@ -91,4 +95,4 @@ data.plot(y='Stress', x='Strain')
 
 #plt.show()
 
-data.to_excel(file_name+'.xls')
+data.to_excel('data/'+file_name+'.xls')
