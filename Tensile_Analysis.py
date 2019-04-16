@@ -5,13 +5,15 @@ import os
 import seaborn as sns
 from scipy import stats
 
+
 '''set cross-sectional area based on specimen type'''
 area = 41.6 #mm^2
 '''gauge length'''
 g_len = 50 #mm
 
-'''get file locations of the raw .dat file'''
+'''get excel files with raw data, stress, strain for plotting and vlookup use'''
 file = 'data/low_high_4545_typei_monotonic_r06.xls'
+file_vlookup = 'data/low_high_4545_typei_monotonic_r06_vlookup.xls'
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
@@ -51,7 +53,7 @@ print(file_name)
 
 #'''create list of column titles'''
 #col_name = ['Force', 'Displacement', 'Time', 'Count']
-col_name = ['Strain', 'Stress']
+col_name = ['Strain', 'Stress','TCStrain','TCStrain_nonneg']
 
 '''create pandas dataframe with the cleaned data'''
 data = pd.read_excel(file)
@@ -149,13 +151,8 @@ print('The P-Value is {}'.format(p_value))
 #print(std_err)
 print('The Standard Error is {}'.format(std_err))
 
-'''START HERE'''
 
-'''Toe Compensated Strain that shifts the Stress/strain curve to the left - set y_plot = 0 and solve for x = intercept/slope'''
-#TC_offset =-intercept/slope
-#data['TCStrain']=data['TCStrain']-TC_offset
-#data['TCStress']=
-'''plotting trendline for corrected load vs Extension'''
+'''plotting trendline for raw data as stress v. strain'''
 #sns.lmplot(y='Stress', x='Strain', data = data,fit_reg=False)
 
 # plot legend
@@ -165,8 +162,48 @@ y_plot = slope* (data.iloc[0:600]['Strain']) + intercept
 
 plt.plot(data.iloc[0:600]['Strain'], y_plot, color='r')
 
-#data['Extension_corrected'] = data['Extension'] + intercept
-
-#sns.lmplot(y='Load', x='Extension_corrected')
-
 plt.show()
+
+'''Toe Compensated Strain that shifts the Stress/strain curve to the left - set y_plot = 0 and solve for x = intercept/slope'''
+TC_offset =-intercept/slope
+data['TCStrain']=data['Strain']-TC_offset
+print('The Toe Compensation Offset is {} mm/mm'.format(TC_offset))
+
+'''Remove negative values in TCStrain column TCStrain_nonneg'''
+data['TCStrain_nonneg'] = data['TCStrain'][data['TCStrain']>=0]
+print(data['TCStrain_nonneg'])
+
+'''Export Stress, Strain, and TCStrain_nonneg columns into new dataframe'''
+tc_col_name=['TCStrain', 'TCStrain_nonneg']
+tcdata = pd.DataFrame(data, columns=tc_col_name)
+
+'''change the data from being a string to a float datatype'''
+tcdata = tcdata.astype(float)
+print(tcdata.head())
+
+'''Shift the TCStrain_nonneg values up, removing the NaN values without loosing any of the other data - this DOES NOT remove rows'''
+
+tcdata = tcdata.apply(lambda x: pd.Series(x.dropna().values))
+print(tcdata.head())
+
+'''rename tcdata column names'''
+tcdata.columns=['TCStrain', 'Strain']
+print(tcdata.head())
+
+'''Read the vlookup excel file created from dat_file_cleaning.py so we can find the TC Stress values'''
+vlookup = pd.read_excel(file_vlookup)
+print(vlookup.head())
+
+'''change the data from being a string to a float datatype'''
+vlookup = vlookup.astype(float)
+
+'''everything works up to this point'''
+
+'''performs a vlookup to match the raw data strain to the TCStrain_nonneg and return the rawdata stress to the TCStress column'''
+#tcstressdata = pd.merge_asof(vlookup, tcdata, left_on='Strain', right_on='TCStrain_nonneg', direction='nearest')
+#index=vlookup['Strain']
+#new_index=tcdata['TCStrain_nonneg']
+tcstressdata = vlookup.reindex_like(tcdata)
+print(tcstressdata.head())
+
+

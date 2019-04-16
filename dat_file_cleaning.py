@@ -53,8 +53,6 @@ col_name = ['Displacement', 'Force', 'Time']
 '''create pandas dataframe with the cleaned data'''
 data = pd.DataFrame(clean_data, columns=col_name)
 
-
-
 '''change the data from being a string to a float datatype'''
 data = data.astype(float)
 
@@ -70,7 +68,6 @@ print(max['Force'])
 min = data[5000:6000].min()
 print(min['Force'])
 
-
 '''take subset of data where the force value is greater than zero'''
 #data = data.loc[(data['Force'] > min['Force']) & (data['Force'] < max['Force'])]
 
@@ -85,7 +82,7 @@ data['NormalDisplacement']= data['Displacement']-data.iloc[0]['Displacement']
 
 '''Strain Calculation'''
 data['Strain'] = data['NormalDisplacement'] / g_len
-print(data['Strain'])
+#print(data['Strain'])
 
 '''plot Force vs. Displacement'''
 data.plot(y='Force', x = 'Displacement')
@@ -96,3 +93,4 @@ data.plot(y='Stress', x='Strain')
 #plt.show()
 
 data.to_excel('data/'+file_name+'.xls')
+data.to_excel('data/'+file_name+'_vlookup.xls')
