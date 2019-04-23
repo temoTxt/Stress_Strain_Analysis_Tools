@@ -1,0 +1,13 @@
+File Name  Applied Stress  Max Cycles 
+data/0.2540_solid_4545_typei_95%uts_0.25hz_r(1).dat 20.1875 192.0
+data/0.2540_solid_4545_typei_95%uts_0.25hz_r(2).dat 20.1875 104.0
+data/0.2540_solid_4545_typei_95%uts_0.25hz_r(3).dat 20.1875 112.0
+data/0.2540_solid_4545_typei_85%uts_0.25hz_r(1).dat 18.0625 554.0
+data/0.2540_solid_4545_typei_85%uts_0.25hz_r(2).dat 18.0625 744.0
+data/0.2540_solid_4545_typei_85%uts_0.25hz_r(3).dat 18.0625 266.0
+data/0.2540_solid_4545_typei_75%uts_0.25hz_r(1).dat 15.9375 1682.0
+data/0.2540_solid_4545_typei_75%uts_0.25hz_r(2).dat 15.9375 496.0
+data/0.2540_solid_4545_typei_75%uts_0.25hz_r(3).dat 15.9375 1670.0
+data/0.2540_solid_4545_typei_65%uts_0.25hz_r(1).dat 13.8125 1872.0
+data/0.2540_solid_4545_typei_65%uts_0.25hz_r(2).dat 13.8125 3180.0
+data/0.2540_solid_4545_typei_65%uts_0.25hz_r(3).dat 13.8125 5678.0

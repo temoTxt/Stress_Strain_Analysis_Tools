@@ -8,15 +8,15 @@ from openpyxl import Workbook, load_workbook
 
 Fatigue = 'File Name  Applied Stress  Max Cycles \n'
 '''get file locations of the raw .dat file'''
-for i in range(0,2):
-    layer_height = ['0.3302', '0.254']
-    infill_density = ['solid', 'hd']
-    type = ['typei', 'd3039']
-    file_front = 'data/' + str(layer_height[i]) + '_' + str(infill_density[i])+'_4545_'+str(type[i])
-    for j in range (0,4):
-        uts_percent =['95%uts','85%uts', '75%uts', '65%uts']
+for i in range(0, 4):
+    layer_infill = ['0.2540_solid', '0.3302_solid', '0.2540_hd', '0.3302_hd']
+#    infill_density = ['solid', 'hd']
+#    type = ['typei', 'd3039']
+    file_front = 'data/' + str(layer_infill[i]) + '_4545_typei'
+    for j in range(0, 4):
+        uts_percent = ['95%uts', '85%uts', '75%uts', '65%uts']
         file_back = file_front + '_' + str(uts_percent[j]) +'_0.25hz_r('
-        for replicates in range(1,4):
+        for replicates in range(1, 4):
             file = file_back+str(replicates)+').dat'
             print(file)
             split_filename = file.split('_')
@@ -235,8 +235,8 @@ for i in range(0,2):
                                         applied_stress = 0.65 * typei_uts
                                     # calculate the maximum number of cycles and applied stress for fatigue data'''
                                     max_cycles = data['Count'].max()
-                    Fatigue = Fatigue + file + ' ' + str(applied_stress) + ' ' + str(max_cycles) + '\n'
-
+                    Fatigue = Fatigue + file_name + '\t' + str(applied_stress) + '\t' + str(max_cycles) + '\n'
+                    data.to_excel('data/' + file_name + '.xlsx')
             True
 
 print(Fatigue)
