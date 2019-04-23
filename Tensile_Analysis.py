@@ -6,14 +6,26 @@ import seaborn as sns
 from scipy import stats
 import difflib
 
-
-'''set cross-sectional area based on specimen type'''
-area = 41.6 #mm^2
-'''gauge length'''
-g_len = 50 #mm
-
-'''get excel files with raw data, stress, strain for plotting and vlookup use'''
+'''get excel files with raw data, stress, strain for plotting and 0.2% offset yield stress'''
 file = 'data/low_high_4545_typei_monotonic_r06.xls'
+
+split_filename = file.split('_')
+specimen_type = split_filename[3]
+if specimen_type in ['typei']:
+    '''D638 type i cross-sectional area'''
+    area = 41.6  # cm^2
+    '''gauge length'''
+    g_len = 50  # mm
+elif specimen_type in ['typeiv']:
+    '''D638 type iv cross-sectional area'''
+    area = 19.8  # cm^2
+    '''gauge length'''
+    g_len = 25  # mm
+else:
+    '''D3039 cross-sectional area'''
+    area = 82.5 # cm^2
+    '''D3039 gauge length'''
+    g_len = 180  # mm
 
 '''get file name to write output file'''
 file_name = os.path.splitext(file)[0]
