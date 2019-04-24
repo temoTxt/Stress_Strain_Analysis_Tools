@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69ab1e12-ff17-47d6-a1eb-1d097fcd960f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" beforeDir="false" afterPath="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/0.3302_hd_4545_typei_65%uts_0.25hz_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/0.3302_hd_4545_typei_65%uts_0.25hz_r(1).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/0.3302_solid_4545_typei_75%uts_0.25hz_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/0.3302_solid_4545_typei_75%uts_0.25hz_r(1).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sncurve_fatigue.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/sncurve_fatigue.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tensile_Analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="35" column="60" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="229" column="69" selection-start-line="229" selection-start-column="69" selection-end-line="229" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/sncurve_fatigue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/output.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>load</find>
+      <find>displacement</find>
+      <find>Extension</find>
+      <find>50:80</find>
+      <find>type</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Toe_Comp.py" />
+        <option value="$PROJECT_DIR$/toe_comp_tensile_analysis.py" />
+        <option value="$PROJECT_DIR$/dat_file_cleaning.py" />
+        <option value="$PROJECT_DIR$/Tensile_Analysis.py" />
+        <option value="$PROJECT_DIR$/data/sncurve_fatigue.py" />
+        <option value="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1294" />
+    <option name="width" value="1328" />
+    <option name="height" value="1834" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stress_Strain_Analysis_Tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stress_Strain_Analysis_Tools" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Stress_Strain_Analysis_Tools" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="processed_data_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mille\PycharmProjects\Stress_Strain_Analysis_Tools\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mille\PycharmProjects\Stress_Strain_Analysis_Tools\data" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.dat_file_cleaning_fatigue">
+    <configuration name="Tensile_Analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tensile_Analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dat_file_cleaning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\mille\Anaconda3\envs\py35\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dat_file_cleaning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dat_file_cleaning_fatigue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sncurve_fatigue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/sncurve_fatigue.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.dat_file_cleaning" />
+      <item itemvalue="Python.Tensile_Analysis" />
+      <item itemvalue="Python.dat_file_cleaning_fatigue" />
+      <item itemvalue="Python.sncurve_fatigue" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dat_file_cleaning_fatigue" />
+        <item itemvalue="Python.sncurve_fatigue" />
+        <item itemvalue="Python.dat_file_cleaning" />
+        <item itemvalue="Python.Tensile_Analysis" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69ab1e12-ff17-47d6-a1eb-1d097fcd960f" name="Default Changelist" comment="" />
+      <created>1555367180143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555367180143</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Today we corrected the stress/strain curve by updating the data clean file to normalize the displacement before calculating the strain.  recalculated the slope so that it only measured and fit to the lines 100 - 300 which is a good range for the Type I data files.  This was in the tensile analysis code.  We removed all data scrubbing of first 75ish lines of load and displacement data.  We started toe compensation. Currently commented out @ line 154 in the tensile analysis code.  Put in enhancement request to complete TC coding.">
+      <created>1555376820743</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555376820743</updated>
+    </task>
+    <task id="LOCAL-00002" summary="I have been able to get the toe compensated to show up and shift removing any non-zero negative values.  I am still struggling with the &quot;vlookup&quot; feature.  I have created a separate file to compare the values.  But i'm still missing something.">
+      <created>1555437996111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555437996111</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I got the toe compensation to work and regraphed the TC Stress v. TC Strain.  There are gaps in the data where there is no stress for the calculated tc strain.  I printed out the table in excel.  The question is do we try a non-exact merge? which i'm having trouble with or do we just delete those rows?">
+      <created>1555452753265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555452753265</updated>
+    </task>
+    <task id="LOCAL-00004" summary="additional excel files">
+      <created>1555463089244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555463089244</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Toe compensated ticket fixed.  Still have negative values after specimen break recorded.">
+      <created>1555512073360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555512073360</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated the data cleaning to focus primarily on fatigue data, pulling all files from path and running in a loop then sending some data to an output file and the bulk of the raw data with normalization to an xlxs file.">
+      <created>1556012844864</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1556012844864</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated the data cleaning to focus primarily on fatigue data, pulling all files from path and running in a loop then sending some data to an output file and the bulk of the raw data with normalization to an xlxs file.">
+      <created>1556012977731</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556012977731</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated the data cleaning to focus primarily on fatigue data, pulling all files from path and running in a loop then sending some data to an output file and the bulk of the raw data with normalization to an xlxs file.">
+      <created>1556013002035</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556013002035</updated>
+    </task>
+    <task id="LOCAL-00009" summary="split out the data scrub for tensile and fatigue.  Got the loops to pull all .dat files that are needed for fatigue.  Working on how to auto calculate the average and s.d">
+      <created>1556033986618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556033986618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1319" height="925" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24669261" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4996109" weight="0.32914573" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49727628" weight="0.32788944" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.79533076" visible="true" weight="0.39447236" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.20466927" side_tool="true" visible="true" weight="0.39447236" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Today we corrected the stress/strain curve by updating the data clean file to normalize the displacement before calculating the strain.  recalculated the slope so that it only measured and fit to the lines 100 - 300 which is a good range for the Type I data files.  This was in the tensile analysis code.  We removed all data scrubbing of first 75ish lines of load and displacement data.  We started toe compensation. Currently commented out @ line 154 in the tensile analysis code.  Put in enhancement request to complete TC coding." />
+    <MESSAGE value="I have been able to get the toe compensated to show up and shift removing any non-zero negative values.  I am still struggling with the &quot;vlookup&quot; feature.  I have created a separate file to compare the values.  But i'm still missing something." />
+    <MESSAGE value="I got the toe compensation to work and regraphed the TC Stress v. TC Strain.  There are gaps in the data where there is no stress for the calculated tc strain.  I printed out the table in excel.  The question is do we try a non-exact merge? which i'm having trouble with or do we just delete those rows?" />
+    <MESSAGE value="additional excel files" />
+    <MESSAGE value="Toe compensated ticket fixed.  Still have negative values after specimen break recorded." />
+    <MESSAGE value="Updated the data cleaning to focus primarily on fatigue data, pulling all files from path and running in a loop then sending some data to an output file and the bulk of the raw data with normalization to an xlxs file." />
+    <MESSAGE value="split out the data scrub for tensile and fatigue.  Got the loops to pull all .dat files that are needed for fatigue.  Working on how to auto calculate the average and s.d" />
+    <option name="LAST_COMMIT_MESSAGE" value="split out the data scrub for tensile and fatigue.  Got the loops to pull all .dat files that are needed for fatigue.  Working on how to auto calculate the average and s.d" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44370">
+          <caret line="2656" selection-start-line="2656" selection-end-line="2656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/xlwt/CompoundDoc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="261" selection-start-line="261" selection-end-line="261" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Toe_Comp.py" />
+    <entry file="file://$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r08.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r11.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="1245" selection-start-line="1245" selection-end-line="1245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/internals/blocks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="918" selection-start-line="918" selection-end-line="918" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toe_comp_tensile_analysis.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/internals/managers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/numpy/lib/function_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40545">
+          <caret line="2385" selection-start-line="2385" selection-end-line="2385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30243">
+          <caret line="1809" selection-start-line="1809" selection-end-line="1809" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/reshape/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24548">
+          <caret line="1473" selection-start-line="1473" selection-end-line="1473" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/0.3302solid_typei_95%uts_0.25hz_r01.dat" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/xlwt/Row.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/io/excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1055" selection-start-line="1055" selection-end-line="1055" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="360" selection-start-line="360" selection-end-line="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dat_file_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="237" column="55" selection-start-line="237" selection-start-column="55" selection-end-line="237" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="453" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/move.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/output">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/xlrd/book.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="674" selection-start-line="674" selection-end-line="674" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/genericpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sncurve_data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tensile_Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/0.2540_solid_4545_typei_65%uts_0.25hz_r(1).dat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sncurve_fatigue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="229" column="69" selection-start-line="229" selection-start-column="69" selection-end-line="229" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

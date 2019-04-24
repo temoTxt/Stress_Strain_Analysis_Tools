@@ -1,34 +1,23 @@
 import os
+import csv
+import sys
+import pandas as pd
 
-sncurve_data = 'data/output'
-sncurve_file = os.path.splitext(sncurve_data)[0] + '.txt'
-sncurve_path = open('data/output', 'w')
-print(sncurve_file)
+'''don't need data/ at the beginning b/c the py script is inside the data folder'''
+'''if you need to move the py script into the parent directory remember to add the path back in'''
+'''the txt file is tab delimitated'''
+sncurve_data_txt = 'output.txt'
+sncurve_data_csv = 'sncurve_data.csv'
+with open(sncurve_data_txt, 'r') as infile, open(sncurve_data_csv, 'w') as outfile:
+    stripped = (line.strip() for line in infile)
+    lines = (line.split("\t") for line in stripped if line)
+    writer = csv.writer(outfile)
+    writer.writerows(lines)
+print(outfile)
 
-'''seperate blob into lines of text'''
-lines = sncurve_path.readlines()
+col_name = ['File Name', 'Percent UTS', 'Applied Stress', 'Max_Cycles']
 
-'''create list object to put in only numerical data'''
-clean_data = []
+'''create pandas dataframe with the cleaned data'''
+data = pd.read_csv(outfile)
+print(data.head())
 
-'''go line by line to scrub header data'''
-for line in lines:
-
-    '''convert all \t to an actual tab in the data'''
-    line = line.replace(' ', ',')
-    #print(line)
-
-    '''strip out the \n at the end of each line'''
-    line = line.rstrip()
-
-    '''check to see if there are any letters in the string. If there are not it must be a data line'''
-    if re.search('[a-zA-Z]', line) == None:
-
-        '''if there is actually values in the line then we add it to our cleaned data list object'''
-        if len(line) > 4:
-
-            '''split the line into multiple elements using the comma as the anchor point'''
-            line = line.split(',')
-
-            '''add this line to the list object for ingest into Pandas'''
-            clean_data.append(line)

@@ -6,7 +6,7 @@ import os
 import openpyxl
 from openpyxl import Workbook, load_workbook
 
-Fatigue = 'File Name  Applied Stress  Max Cycles \n'
+Fatigue = 'File Name \t Percent UTS \t Applied Stress \t Max Cycles \n'
 '''get file locations of the raw .dat file'''
 for i in range(0, 4):
     layer_infill = ['0.2540_solid', '0.3302_solid', '0.2540_hd', '0.3302_hd']
@@ -225,12 +225,11 @@ for i in range(0, 4):
                                     applied_stress = 0.65 * typei_uts
                                 # calculate the maximum number of cycles and applied stress for fatigue data'''
                                 max_cycles = data['Count'].max()
-                    Fatigue = Fatigue + file_name + str(percent_uts) + '\t' + float(input(applied_stress)) + '\t' + float(input(max_cycles)) + '\n'
+                    Fatigue = Fatigue + str(file_front) + '\t' + str(percent_uts) + '\t' + str(applied_stress) + '\t' + str(max_cycles) + '\n'
                     #this part is going to take a while.  like 15 seconds to 30 seconds per excel file.
-                    #data.to_excel('data/' + file_name + '.xlsx')
+                    data.to_excel('data/processed_data_files/fatigue/' + file_name + '.xlsx')
             True
 
 print(Fatigue)
 sncurve_data = open('data/output.txt', 'r+')
 sncurve_data.writelines(Fatigue)
-
