@@ -1,9 +1,0 @@
-File Name 	 Percent UTS 	 Applied Stress 	 Max Cycles 
-data/0.3302_solid_4545_typei	95%uts	20.1875	80.0
-data/0.3302_solid_4545_typei	95%uts	20.1875	636.0
-data/0.3302_solid_4545_typei	95%uts	20.1875	102.0
-data/0.3302_solid_4545_typei	85%uts	18.0625	338.0
-data/0.3302_solid_4545_typei	85%uts	18.0625	290.0
-data/0.3302_solid_4545_typei	85%uts	18.0625	834.0
-data/0.3302_solid_4545_typei	75%uts	15.9375	786.0
-data/0.3302_solid_4545_typei	75%uts	15.9375	992.0

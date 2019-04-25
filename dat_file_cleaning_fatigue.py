@@ -231,5 +231,5 @@ for i in range(0, 4):
             True
 
 print(Fatigue)
-sncurve_data = open('data/output.txt', 'r+')
+sncurve_data = open('data/output', 'r+')
 sncurve_data.writelines(Fatigue)
