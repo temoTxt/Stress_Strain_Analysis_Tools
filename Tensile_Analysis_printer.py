@@ -100,7 +100,9 @@ for i in range(0, 4):
 
                             '''Stress calculation'''
                             data['Stress'] = data['Force'] / area
-
+                            '''Calculate UTS'''
+                            max_stress = round(data['Stress'].max(), 2)
+                            
                             '''Normalize the Displacement'''
                             data['NormalDisplacement'] = data['Displacement']-data.iloc[0]['Displacement']
 
