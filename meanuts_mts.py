@@ -33,22 +33,7 @@ for i in range(0, 4):
                     layer_thickness = split_layer[1]
                     infill = split_filename[1]
 
-                    if specimen_type in ['typei']:
-                        '''D638 type i cross-sectional area'''
-                        area = 41.6  # cm^2
-                        '''gauge length'''
-                        g_len = 50  # mm
 
-                    elif specimen_type in ['typeiv']:
-                        '''D638 type iv cross-sectional area'''
-                        area = 19.8  # cm^2
-                        '''gauge length'''
-                        g_len = 25  # mm
-                    else:
-                        '''D3039 cross-sectional area'''
-                        area = 82.5 # cm^2
-                        '''D3039 gauge length'''
-                        g_len = 180  # mm
                     # print('The '+str(specimen_type)+' cross-sectional area is', area, ' mm2')
                     # print('The '+str(specimen_type)+' gage length is', g_len, ' mm')
                     '''get file name to write output file'''
@@ -77,10 +62,12 @@ for i in range(0, 4):
                                 '''strip out the \n at the end of each line'''
                                 line = line.rstrip()
 
-                                '''check to see if there are any letters in the string. If there are not it must be a data line'''
+                                # check to see if there are any letters in the string. If there are not it must be a
+                                # data line
                                 if re.search('[a-zA-Z]', line) == None:
 
-                                    '''if there is actually values in the line then we add it to our cleaned data list object'''
+                                    #if there is actually values in the line then we add it to our cleaned data list
+                                    # object
                                     if len(line) > 4:
 
                                         '''split the line into multiple elements using the comma as the anchor point'''
@@ -97,6 +84,24 @@ for i in range(0, 4):
 
                             '''change the data from being a string to a float datatype'''
                             data = data.astype(float)
+
+                            # select the correct cross sectional area and gage length for the specimen type
+                            if specimen_type in ['typei']:
+                                '''D638 type i cross-sectional area'''
+                                area = 41.6  # cm^2
+                                '''gauge length'''
+                                g_len = 50  # mm
+
+                            elif specimen_type in ['typeiv']:
+                                '''D638 type iv cross-sectional area'''
+                                area = 19.8  # cm^2
+                                '''gauge length'''
+                                g_len = 25  # mm
+                            else:
+                                '''D3039 cross-sectional area'''
+                                area = 82.5  # cm^2
+                                '''D3039 gauge length'''
+                                g_len = 180  # mm
 
                             '''Stress calculation'''
                             data['Stress'] = data['Force'] / area
@@ -125,7 +130,8 @@ for i in range(0, 4):
                             # print('The strain at break for "', file_name, '" is ', strain_break, ' mm/mm.')
                             '''Take the difference with each row in Stress_nonneg'''
                             # print('The stress at break for "', file_name, '" is ', stress_break, ' MPa.')
-                            Tensile = Tensile + str(file_name) +'\t' + str(printer) + '\t' + str(max_stress) + '\t' + str(stress_break) + '\t' + str(strain_break) + '\n'
+                            Tensile = Tensile + str(file_name) + '\t' + str(printer) + '\t' + str(max_stress) + '\t' + \
+                                str(stress_break) + '\t' + str(strain_break) + '\n'
                             #data.to_excel('data/processed_data_files/fatigue/' + file_name + '.xlsx')
                     True
 
