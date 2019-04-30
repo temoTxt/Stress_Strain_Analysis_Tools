@@ -2,15 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ab1e12-ff17-47d6-a1eb-1d097fcd960f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/appliedstress_typeiv_4545" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tensile_Analysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r07.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r08.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r09.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r11.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output" beforeDir="false" afterPath="$PROJECT_DIR$/data/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" beforeDir="false" afterPath="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py" beforeDir="false" afterPath="$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Specimen_RawData_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Specimen_RawData_1.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/elastic_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/elastic_outputdata.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_high_090_typei_monotonic_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_high_090_typei_monotonic_r(2).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_high_090_typei_monotonic_r(3).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_high_090_typei_monotonic_r(4).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_low_090_typeiv_monotonic_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_low_090_typeiv_monotonic_r(2).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_low_090_typeiv_monotonic_r(3).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_low_4545_typeiv_monotonic_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/high_low_4545_typeiv_monotonic_r(2).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_090_typei_monotonic_r(16).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_090_typei_monotonic_r(7).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_090_typei_monotonic_r(8).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r(2).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r(3).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06_tc.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06_tccurve.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06_vlookup.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_low_090_typei_monotonic_r(1).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_low_090_typei_monotonic_r(2).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/low_low_090_typei_monotonic_r(3).dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/move.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sncurve_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sncurve_fatigue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tensile_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tensile_outputdata.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,23 +50,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/sncurve_fatigue.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="-1315">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tensile_Analysis_ssms.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+            <state relative-caret-position="337">
+              <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -74,10 +104,17 @@
         <option value="$PROJECT_DIR$/dat_file_cleaning.py" />
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/dat_file_cleaning_tensile.py" />
-        <option value="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" />
         <option value="$PROJECT_DIR$/data/sncurve_fatigue.py" />
         <option value="$PROJECT_DIR$/Tensile_Analysis.py" />
         <option value="$PROJECT_DIR$/Tensile_Analysis_ssms.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress_typei.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress_d3039.py" />
+        <option value="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress_d3039_4545.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress_typei_4545.py" />
+        <option value="$PROJECT_DIR$/data/Applied_Stress_typeiv_4545.py" />
+        <option value="$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py" />
       </list>
     </option>
   </component>
@@ -143,8 +180,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Tensile_Analysis_ssms">
-    <configuration name="Tensile_Analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Applied_Stress_typeiv_4545">
+    <configuration name="Applied_Stress" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Stress_Strain_Analysis_Tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,11 +189,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tensile_Analysis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/Applied_Stress.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,7 +202,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Tensile_Analysis_ssms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Applied_Stress_d3039" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Stress_Strain_Analysis_Tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -173,11 +210,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tensile_Analysis_ssms.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/Applied_Stress_d3039.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Applied_Stress_typei" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/Applied_Stress_typei.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Applied_Stress_typeiv_4545" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/Applied_Stress_typeiv_4545.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -207,62 +286,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dat_file_cleaning_tensile" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Stress_Strain_Analysis_Tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dat_file_cleaning_tensile.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sncurve_fatigue" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Stress_Strain_Analysis_Tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/sncurve_fatigue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.dat_file_cleaning_fatigue" />
-      <item itemvalue="Python.sncurve_fatigue" />
-      <item itemvalue="Python.dat_file_cleaning_tensile" />
-      <item itemvalue="Python.Tensile_Analysis" />
-      <item itemvalue="Python.Tensile_Analysis_ssms" />
+      <item itemvalue="Python.Applied_Stress" />
+      <item itemvalue="Python.Applied_Stress_typei" />
+      <item itemvalue="Python.Applied_Stress_d3039" />
+      <item itemvalue="Python.Applied_Stress_typeiv_4545" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Tensile_Analysis_ssms" />
-        <item itemvalue="Python.sncurve_fatigue" />
-        <item itemvalue="Python.Tensile_Analysis" />
-        <item itemvalue="Python.dat_file_cleaning_tensile" />
+        <item itemvalue="Python.Applied_Stress_typeiv_4545" />
         <item itemvalue="Python.dat_file_cleaning_fatigue" />
+        <item itemvalue="Python.Applied_Stress_typei" />
+        <item itemvalue="Python.Applied_Stress_d3039" />
+        <item itemvalue="Python.Applied_Stress" />
       </list>
     </recent_temporary>
   </component>
@@ -354,25 +391,33 @@
       <option name="project" value="LOCAL" />
       <updated>1556161103827</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added the data cleanup file for tensile data to support parsing printer comparison runs.">
+      <created>1556402849673</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556402849673</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1319" height="925" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24669261" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24669261" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4996109" weight="0.32914573" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49416342" weight="0.32788944" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7937743" weight="0.39447236" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4918288" visible="true" weight="0.32788944" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7922179" weight="0.39447236" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50583655" side_tool="true" visible="true" weight="0.32788944" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5081712" side_tool="true" visible="true" weight="0.32788944" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -478,24 +523,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dat_file_cleaning.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/tokenize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="453" selection-start-line="453" selection-end-line="453" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/move.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -557,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3842">
-          <caret line="235" lean-forward="true" selection-start-line="235" selection-end-line="235" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dat_file_cleaning_tensile.py" />
     <entry file="file://$PROJECT_DIR$/dat_file_cleaning_tensile_csv.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -588,9 +609,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tensile_Analysis_ssms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="94" column="69" selection-start-line="91" selection-start-column="20" selection-end-line="94" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="453" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/appliedstress_typei_output">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress_typei.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/appliedstress_d3039_output">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress_d3039.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/appliedstress_typeiv_4545">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/sncurve_fatigue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="164">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -598,10 +682,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tensile_Analysis_ssms.py">
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress_d3039_4545.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+        <state relative-caret-position="417">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress_typei_4545.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Applied_Stress_typeiv_4545.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1315">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

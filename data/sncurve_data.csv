@@ -1,7 +1,0 @@
-File Name , Percent UTS , Applied Stress , Max Cycles
-data/0.3302_solid_4545_typei,75%uts,15.9375,876.0
-data/0.3302_hd_4545_typei,65%uts,13.8125,2402.0
-r(1),65%uts,13.8125,2402.0
-Stress  Max Cycles
-0.3302_solid_4545_typei_75%uts_0.25hz_r(1),75%uts,15.9375,876.0
-0.3302_hd_4545_typei_65%uts_0.25hz_r(1),65%uts,13.8125,2402.0

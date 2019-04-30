@@ -130,5 +130,5 @@ for i in range(0, 4):
                     True
 
 print(Tensile)
-tensile_data = open('data/output', 'r+')
+tensile_data = open('data/tensile_output', 'r+')
 tensile_data.writelines(Tensile)
