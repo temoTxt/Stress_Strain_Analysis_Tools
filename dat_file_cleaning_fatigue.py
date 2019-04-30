@@ -7,7 +7,6 @@ import openpyxl
 from openpyxl import Workbook, load_workbook
 
 Fatigue = 'File Name \t Max Cycles \n'
-AppliedStress = 'Layer \t Infill \t Applied Stress (MPa) \n'
 '''get file locations of the raw .dat file'''
 '''double check that your file names match the naming cadence and fix the code to match your cadence'''
 '''or change your cadence to match the code'''
