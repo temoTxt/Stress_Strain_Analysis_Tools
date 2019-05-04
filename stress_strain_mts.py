@@ -6,49 +6,26 @@ import seaborn as sns
 from scipy import stats
 import difflib
 
-Tensile = 'File Name \t UTS (MPa) \t Elastic Modulus (MPa) \n'
-'''get file locations of the raw .dat file for SMSS Paper'''
+Tensile = 'File Name \t Dose (MGy) \t UTS (MPa) \t Elastic Modulus (MPa) \t 0.2% Offset Yield Stress \t ' \
+          '0.2% Offset Yield Strain \t Strain Hardening Ratio \t Modulus of Toughness \n'
+'''get file locations of the raw .dat file'''
 for i in range(0, 4):
-    layer_infill = ['low_low_', 'high_low_', 'low_high_', 'high_high_']
-    file_front = 'data/' + str(layer_infill[i])
+    thickness = ['3.3302_', '1.27_', '0.2540_', '15.49_']
+    file_front = 'data/' + str(thickness[i])
     # print(file_front)
-    #for j in range(0,2):
-        #printer = ['uprint', 'dimension']
-        #file_middle = file_front + str(printer[j]) + '_'
+    for j in range(0, 7):
+        dose = ['0mgy', '0.1mgy', '0.2mgy', '0.3mgy', '0.5mgy', '0.6mgy', '1.0mgy']
+        file_middle = file_front + str(dose[j]) + '_r('
         # print(file_middle)
-        #for k in range(0,2):
-            #type = ['typei', 'typeiv']
-            #file_back = file_middle + str(type[k])
-    for n in range(0, 2):
-        raster = ['4545_', '090_']
-        file_last = file_front + str(raster[n]) + 'typeiv_monotonic_r('
-        for replicates in range(1, 21):
-            file = file_last + str(replicates) + ').dat'
-            #print(file)
+        for replicates in range(1, 13):
+            file = file_middle + str(replicates) + ').dat'
+            # print(file)
             split_filename = file.split('_')
-            specimen_type = split_filename[3]
-            printer = split_filename[2]
+            dose = split_filename[1]
             layer = split_filename[0]
             split_layer = layer.split('/')
             layer_thickness = split_layer[1]
-            infill = split_filename[1]
 
-            if specimen_type in ['typei']:
-                '''D638 type i cross-sectional area'''
-                area = 41.6  # cm^2
-                '''gauge length'''
-                g_len = 50  # mm
-
-            elif specimen_type in ['typeiv']:
-                '''D638 type iv cross-sectional area'''
-                area = 19.8  # cm^2
-                '''gauge length'''
-                g_len = 25  # mm
-            else:
-                '''D3039 cross-sectional area'''
-                area = 82.5 # cm^2
-                '''D3039 gauge length'''
-                g_len = 180  # mm
             # print('The '+str(specimen_type)+' cross-sectional area is', area, ' mm2')
             # print('The '+str(specimen_type)+' gage length is', g_len, ' mm')
             '''get file name to write output file'''
@@ -98,6 +75,24 @@ for i in range(0, 4):
                     '''change the data from being a string to a float datatype'''
                     data = data.astype(float)
 
+                    '''gauge length'''
+                    g_len = 25  # mm
+                    # select the correct cross sectional area for specimen based on thickness
+                    if layer_thickness in ['3.3302']:
+                        area = 6 * 3.3302  # cm^2
+
+                    elif layer_thickness in ['1.27']:
+                        area = 6 * 1.27  # cm^2
+                        '''gauge length'''
+
+                    elif layer_thickness in ['0.2540']:
+                        area = 6 * 0.2540  # cm^2
+
+                    elif layer_thickness in ['15.49']:
+                        area = 6 * 15.49  # cm^2
+                    else:
+                        area = 6 * 3.3  # cm^2
+
                     '''Stress calculation'''
                     data['Stress'] = data['Force'] / area
                     '''Calculate UTS'''
@@ -115,7 +110,7 @@ for i in range(0, 4):
                     data.plot(y='Stress', x='Strain')
 
                     '''plotting trendline for corrected load vs Extension'''
-                    fig = sns.lmplot(y='Stress', x='Strain', data=data, fit_reg=False)
+                    sns.lmplot(y='Stress', x='Strain', data=data, fit_reg=False)
 
                     '''get coeffs of linear fit'''
                     slope, intercept, r_value, p_value, std_err = stats.linregress(data.iloc[100:600]['Strain'], data.iloc[100:600]['Stress'])
@@ -131,7 +126,7 @@ for i in range(0, 4):
                     #plt.plot(data[0:600]['Strain'], y_plot, color='r')
 
                     '''Toe Compensated Strain that shifts the Stress/strain curve to the left - set y_plot = 0 and solve for x = intercept/slope'''
-                    TC_offset =-intercept/slope
+                    TC_offset = -intercept/slope
                     data['TCStrain'] = data['Strain']-TC_offset
                     #print('The Toe Compensation Offset is {} mm/mm'.format(TC_offset))
 
@@ -140,7 +135,7 @@ for i in range(0, 4):
                     #print(tcdata.head())
 
                     '''create vlookup dataframe'''
-                    vl_col_name=['Strain', 'Stress']
+                    vl_col_name = ['Strain', 'Stress']
                     vlookup = pd.DataFrame(data, columns=vl_col_name)
 
                     '''change the data from being a string to a float datatype'''
@@ -160,23 +155,29 @@ for i in range(0, 4):
                     '''Drop the rows with NaN values at the beginning.  NaN values should only be in the TCStrain_nonneg column'''
                     tcstressdata = tcstressdata.dropna(axis='rows', how='any')
 
-                    tcstress_col_name=['TCStrain', 'Stress_x']
+                    tcstress_col_name = ['TCStrain', 'Stress_x']
                     tccurvedata = pd.DataFrame(tcstressdata, columns=tcstress_col_name)
 
                     '''change the data from being a string to a float datatype'''
                     tccurvedata = tccurvedata.astype(float)
 
                     '''rename tccurvedata column names'''
-                    tccurvedata.columns=['TCStrain', 'TCStress']
+                    tccurvedata.columns = ['TCStrain', 'TCStress']
                     #print(tccurvedata.head())
 
                     # tccurvedata.to_excel('data/'+file_name+'_tccurve.xls')
+
+                    '''Remove negative values in Strain_y column.  Thiw will create NaN values that we will cleanup in the next step'''
+                    tccurvedata['TCStress'] = tccurvedata['TCStress'][tccurvedata['TCStress'] >= 0]
+
+                    '''Drop the rows with NaN values at the beginning.  NaN values should only be in the TCStrain_nonneg column'''
+                    tccurvedata = tccurvedata.dropna(axis='rows', how='any')
 
                     '''plot TC Stress vs. TC Strain'''
                     tccurvedata.plot(y='TCStress', x='TCStrain')
 
                     '''now let's plot the TC Stress v. TC Strain linear fit'''
-                    fig = sns.lmplot(y='TCStress', x='TCStrain', data=tccurvedata, fit_reg=False)
+                    sns.lmplot(y='TCStress', x='TCStrain', data=tccurvedata, fit_reg=False)
 
 
                     '''get coeffs of linear fit of the toe compensated elastic region'''
@@ -186,18 +187,44 @@ for i in range(0, 4):
                     #print('The R-Value of the linear regression fit is {}'.format(tc_r_value))
                     #print('The P-Value is {}'.format(tc_p_value))
                     #print('The Standard Error of the fit is {}'.format(tc_std_err))
-                    plt.close('all')
                     '''graph the linear fit used to determine the elastic modulus of the TC curve'''
-
+                    elastic = round(tc_slope, 1)
                     tc_y_plot = tc_slope * (tccurvedata.iloc[0:800]['TCStrain']) + tc_intercept
-
-                    #plt.plot(tccurvedata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
-
+                    offset_yintercept = -(tccurvedata.iloc[0]['TCStrain']+0.002)/tc_slope
+                    #print(offset_yintercept)
+                    tccurvedata['offset_strain'] = tccurvedata['TCStrain'] + 0.002
+                    tccurvedata['offset_stress'] = tc_slope*(tccurvedata.iloc[0:1800]['offset_strain']) + offset_yintercept
+                    plt.plot(tccurvedata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
+                    plt.plot(tccurvedata.iloc[0:1800]['offset_strain'], tccurvedata.iloc[0:1800]['offset_stress'], color='y')
+                    plt.savefig('data/processed_data_files/tensile/' + file_name + '.png')
                     #plt.show()
-                    Tensile = Tensile + str(file_name) + '\t' + str(max_stress) + '\t' + str(tc_slope) + '\n'
-                    #data.to_excel('data/processed_data_files/fatigue/' + file_name + '.xlsx')
+
+                    '''sorting required so we don't get an error when we merge_asof'''
+                    tccurvedata = tccurvedata.sort_values('offset_strain')
+                    vlookup = vlookup.sort_values('Strain')
+
+                    '''performs a vlookup to match the raw data strain to the TCStrain and return the rawdata stress to the offset Stress column'''
+                    offsetdata = pd.merge_asof(tccurvedata, vlookup, left_on='offset_strain', right_on='Strain',
+                                                 direction='nearest')
+                    #print(offsetdata.iloc[400:405])
+                    offset_col_name = ['offset_strain', 'offset_stress', 'Strain', 'Stress', 'TCStrain']
+                    offset = pd.DataFrame(offsetdata, columns=offset_col_name)
+                    offset = offset.astype(float)
+                    offset['error'] = (offset['offset_stress']-offset['Stress'])/offset['Stress']
+                    offset['error'] = offset['error'].abs()
+                    #print(offset.iloc[400:405])
+                    yield_stress = round(offset.iloc[offset['error'].idxmin()]['Stress'], 2)
+                    yield_strain = round(offset.iloc[offset['error'].idxmin()]['TCStrain'], 4)
+                    '''change the data from being a string to a float datatype'''
+                    strain_hardening_ratio = round(max_stress/yield_stress, 2)
+                    modulus_toughness = round(((yield_stress+max_stress)*yield_strain/2)-
+                                              ((((yield_stress+max_stress)/2)**2)/(2*elastic)), 2)
+                    Tensile = Tensile + str(file_name) + '\t' + str(dose) + '\t' + str(max_stress) + '\t' + \
+                              str(elastic) + '\t' + str(yield_stress) + '\t' + str(yield_strain) + '\t' + \
+                              str(strain_hardening_ratio) + '\t' + str(modulus_toughness) + '\n'
+                    offsetdata.to_excel('data/processed_data_files/tensile/' + file_name + '.xlsx')
             True
 
 print(Tensile)
-tensile_data = open('data/output', 'r+')
-tensile_data.writelines(Tensile)
+#tensile_data = open('data/3.3302_0MGy_elastic_output.txt', 'r+')
+#tensile_data.writelines(Tensile)
