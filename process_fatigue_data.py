@@ -2,13 +2,15 @@ import pandas as pd
 import numpy as np
 import scipy.integrate as integrate
 
-data = pd.read_excel('/home/tmorris/ResearchReader/articles/Fatigue Data/95% UTS/0.3302 Solid/95% UTS 0.3302 Solid.xlsx', header=1)
-
+data = pd.read_excel('data/Fatigue Data/65% UTS/0.3302 Solid/type iv_0.3302solid_65%uts_0.25hz_r04.xlsx', skiprows=7)
+print(data.head())
 pos = []
 neg = []
 '''group by what cycle you are on'''
+'''TODO: Make this loop parallelized'''
 for cycle, df_cycle in data.groupby('Cycle'):
     #print(df_cycle.head())
+    print(cycle)
 
     '''grab the data for the y vs. x relations of Force vs. Displacement'''
     y = df_cycle['Normalized Force (kN)'].to_list()
