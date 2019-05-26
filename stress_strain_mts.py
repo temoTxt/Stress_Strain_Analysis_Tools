@@ -196,7 +196,7 @@ for i in range(0, 4):
                     tccurvedata['offset_stress'] = tc_slope*(tccurvedata.iloc[0:1800]['offset_strain']) + offset_yintercept
                     plt.plot(tccurvedata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
                     plt.plot(tccurvedata.iloc[0:1800]['offset_strain'], tccurvedata.iloc[0:1800]['offset_stress'], color='y')
-                    plt.savefig('data/processed_data_files/tensile/' + file_name + '.png')
+                    #plt.savefig('data/processed_data_files/tensile/' + file_name + '.png')
                     #plt.show()
 
                     '''sorting required so we don't get an error when we merge_asof'''
@@ -222,9 +222,9 @@ for i in range(0, 4):
                     Tensile = Tensile + str(file_name) + '\t' + str(dose) + '\t' + str(max_stress) + '\t' + \
                               str(elastic) + '\t' + str(yield_stress) + '\t' + str(yield_strain) + '\t' + \
                               str(strain_hardening_ratio) + '\t' + str(modulus_toughness) + '\n'
-                    offsetdata.to_excel('data/processed_data_files/tensile/' + file_name + '.xlsx')
+                   # offsetdata.to_excel('data/processed_data_files/tensile/' + file_name + '.xlsx')
             True
 
 print(Tensile)
-#tensile_data = open('data/3.3302_0MGy_elastic_output.txt', 'r+')
-#tensile_data.writelines(Tensile)
+tensile_data = open('data/1.27_0MGy_elastic_output.txt', 'r+')
+tensile_data.writelines(Tensile)
