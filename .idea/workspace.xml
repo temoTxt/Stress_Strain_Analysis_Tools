@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ab1e12-ff17-47d6-a1eb-1d097fcd960f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meanuts_mts.py" beforeDir="false" afterPath="$PROJECT_DIR$/meanuts_mts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stress_strain_mts.py" beforeDir="false" afterPath="$PROJECT_DIR$/stress_strain_mts.py" afterDir="false" />
-    </list>
+    <list default="true" id="69ab1e12-ff17-47d6-a1eb-1d097fcd960f" name="Default Changelist" comment="no changes just ran code for new data" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,23 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanuts_mts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="130" column="54" lean-forward="true" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stress_strain_mts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="198" column="21" selection-start-line="198" selection-start-column="21" selection-end-line="198" selection-end-column="21" />
+            <state relative-caret-position="147">
+              <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -46,7 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process_fatigue_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="51">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -72,6 +57,9 @@
       <find>type</find>
       <find>test_type</find>
       <find>printer</find>
+      <find>fig</find>
+      <find>plot</find>
+      <find>plt.plot</find>
     </findStrings>
     <replaceStrings>
       <replace>dose</replace>
@@ -99,8 +87,11 @@
         <option value="$PROJECT_DIR$/data/Applied_Stress_typeiv_4545.py" />
         <option value="$PROJECT_DIR$/dat_file_cleaning_fatigue.py" />
         <option value="$PROJECT_DIR$/dat_file_cleaning_tensile_dat.py" />
+        <option value="$PROJECT_DIR$/process_fatigue_data.py" />
+        <option value="$PROJECT_DIR$/data/class_stress.py" />
         <option value="$PROJECT_DIR$/meanuts_mts.py" />
         <option value="$PROJECT_DIR$/stress_strain_mts.py" />
+        <option value="$PROJECT_DIR$/stress_strain_mtsfilter.py" />
       </list>
     </option>
   </component>
@@ -114,40 +105,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stress_Strain_Analysis_Tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Stress_Strain_Analysis_Tools" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Stress_Strain_Analysis_Tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mille\PycharmProjects\Stress_Strain_Analysis_Tools" />
       <recent name="C:\Users\mille\PycharmProjects\Stress_Strain_Analysis_Tools\data" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mille\PycharmProjects\Stress_Strain_Analysis_Tools\data" />
     </key>
   </component>
@@ -163,28 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.stress_strain_mts">
-    <configuration name="Applied_Stress_typei" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Stress_Strain_Analysis_Tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/Applied_Stress_typei.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.stress_strain_mtsfilter">
     <configuration name="Applied_Stress_typeiv_4545" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Stress_Strain_Analysis_Tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,20 +221,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="stress_strain_mtsfilter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Stress_Strain_Analysis_Tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stress_strain_mtsfilter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Applied_Stress_typei" />
       <item itemvalue="Python.Applied_Stress_typeiv_4545" />
       <item itemvalue="Python.dat_file_cleaning_fatigue" />
       <item itemvalue="Python.meanuts_mts" />
       <item itemvalue="Python.stress_strain_mts" />
+      <item itemvalue="Python.stress_strain_mtsfilter" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.stress_strain_mts" />
+        <item itemvalue="Python.stress_strain_mtsfilter" />
         <item itemvalue="Python.meanuts_mts" />
+        <item itemvalue="Python.stress_strain_mts" />
         <item itemvalue="Python.Applied_Stress_typeiv_4545" />
         <item itemvalue="Python.dat_file_cleaning_fatigue" />
-        <item itemvalue="Python.Applied_Stress_typei" />
       </list>
     </recent_temporary>
   </component>
@@ -416,26 +389,40 @@
       <option name="project" value="LOCAL" />
       <updated>1556939233736</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="no changes just ran code for new data">
+      <created>1558887634593</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1558887634593</updated>
+    </task>
+    <task id="LOCAL-00019" summary="no changes just ran code for new data">
+      <created>1561740120377</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561740120377</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1319" height="925" extended-state="6" />
+    <frame x="-7" y="-7" width="1309" height="925" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24669261" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4996109" weight="0.32914573" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49105057" weight="0.32788944" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7914397" weight="0.39447236" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48705882" weight="0.32788944" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.79058826" weight="0.39447236" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5089494" side_tool="true" visible="true" weight="0.32788944" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5129412" side_tool="true" visible="true" weight="0.32788944" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49803922" weight="0.32914573" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,39 +443,10 @@
     <MESSAGE value="changed some of my tensile python file names" />
     <MESSAGE value="added 0.2% offset line and calculation of yield stress and strain to meanuts_mts and stres_strain_mts python files.  Added save plot function to save stress strain curves" />
     <MESSAGE value="added strain hardening ratio and modulus of toughness to tensile stress strain python code." />
-    <option name="LAST_COMMIT_MESSAGE" value="added strain hardening ratio and modulus of toughness to tensile stress strain python code." />
+    <MESSAGE value="no changes just ran code for new data" />
+    <option name="LAST_COMMIT_MESSAGE" value="no changes just ran code for new data" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/numpy/lib/function_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40545">
-          <caret line="2385" selection-start-line="2385" selection-end-line="2385" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30243">
-          <caret line="1809" selection-start-line="1809" selection-end-line="1809" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/reshape/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24548">
-          <caret line="1473" selection-start-line="1473" selection-end-line="1473" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/low_high_4545_typei_monotonic_r06.csv" />
-    <entry file="file://$PROJECT_DIR$/data/0.3302solid_typei_95%uts_0.25hz_r01.dat" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/xlwt/Row.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/io/excel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -527,13 +485,6 @@
     <entry file="file://$PROJECT_DIR$/dat_file_cleaning_fatigue - Copy.py" />
     <entry file="file://$PROJECT_DIR$/data/input.py" />
     <entry file="file://$PROJECT_DIR$/Test.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/indexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="2138" selection-start-line="2138" selection-end-line="2138" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/0.254_solid_uprint_typeiv_4545_r(2).dat" />
     <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,38 +544,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1.27_0MGy_meanuts_output.txt" />
+    <entry file="file://$PROJECT_DIR$/data/1.27_0MGy_elastic_output.txt" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py35/Lib/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="2138" selection-start-line="2138" selection-end-line="2138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/0.2540_0mgy_r(7).dat" />
+    <entry file="file://$PROJECT_DIR$/data/0.2540_0mgy_r(10).dat" />
+    <entry file="file://$PROJECT_DIR$/data/0.2540_0mgy_r(11).dat" />
+    <entry file="file://$PROJECT_DIR$/data/0.2540_0mgy_r(1).dat" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/process_fatigue_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="51">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.27_0MGy_meanuts_output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanuts_mts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="130" column="54" lean-forward="true" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/1.27_0MGy_elastic_output.txt">
+    <entry file="file://$PROJECT_DIR$/data/class_stress.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/stress_strain_mts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="198" column="21" selection-start-line="198" selection-start-column="21" selection-end-line="198" selection-end-column="21" />
+        <state relative-caret-position="85">
+          <caret line="218" column="20" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stress_strain_mtsfilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="257" column="31" lean-forward="true" selection-start-line="257" selection-start-column="31" selection-end-line="257" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanuts_mts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

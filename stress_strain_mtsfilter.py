@@ -4,7 +4,7 @@ import matplotlib.pyplot as pyplt
 import os
 import seaborn as sns
 from scipy import stats, signal
-
+import numpy as np
 
 Tensile = 'File Name \t Dose (MGy) \t UTS (MPa) \t Elastic Modulus (MPa) \t 0.2% Offset Yield Stress \t ' \
           '0.2% Offset Yield Strain \t Strain Hardening Ratio \t Modulus of Toughness \n'
@@ -70,7 +70,9 @@ for i in range(0, 3):
 
                     '''create pandas dataframe with the cleaned data'''
                     data = pd.DataFrame(clean_data, columns=col_name)
-                    # print(data.head())
+                    #index is time.
+                    #data = data.set_index('Time')
+                    #print(data.head())
 
                     '''change the data from being a string to a float datatype'''
                     data = data.astype(float)
@@ -91,12 +93,53 @@ for i in range(0, 3):
                     else:
                         area = 6 * 3.3  # cm^2
 
-                    '''filter the raw data'''
-                    #make the time column the index of the datafram
+                    '''downsample the raw data by slicing created aliasing so let's run a filter'''
+                    #data = data[::20]
 
+                    fig, ax = pyplt.subplots()
+                    ax.plot(data['Displacement'], data['Force'], label="Original")
+                    '''calculating the running average using different window sizes'''
+                    window_lst = [3, 6, 10, 16, 22, 35]
+                    y_avg = np.zeros((len(window_lst), len(data['Displacement'])))
+                    for i, window in enumerate(window_lst):
+                        avg_mask = np.ones(window) / window
+                        y_avg[i, :] = np.convolve(data['Force'], avg_mask, 'same')
+                        # Plot each running average with an offset of 50
+                        # in order to be able to distinguish them
+                        ax.plot(data['Displacement'], y_avg[i, :] + (i + 1) * 50, label=window)
+                    # Add legend to plot
+                    ax.legend()
+                    # add labels to the axes
+                    pyplt.xlabel('Un-Normalized Displacement (mm)')
+                    pyplt.ylabel('Force (N)')
+                    #pyplt.show()
+                    pyplt.clf()
 
+                    # '''Trying a guassian window for data smoothing'''
+                    # gaussian_func = lambda x, sigma: 1 / np.sqrt(2 * np.pi * sigma ** 2) * np.exp(
+                    #     -(x ** 2) / (2 * sigma ** 2))
+                    # fig, ax = pyplt.subplots()
+                    # # Compute moving averages using different window sizes
+                    # sigma_lst = [1, 2, 3, 5, 8, 10]
+                    # y_gau = np.zeros((len(sigma_lst), len(data['Displacement'])))
+                    # for j, sigma in enumerate(sigma_lst):
+                    #     gau_x = np.linspace(-2.7 * sigma, 2.7 * sigma, 6 * sigma)
+                    #     gau_mask = gaussian_func(gau_x, sigma)
+                    #     y_gau[j, :] = np.convolve(data['Force'], gau_mask, 'same')
+                    #     ax.plot(data['Displacement'], y_gau[j, :] + (j + 1) * 50,
+                    #             label=r"$\sigma = {}$, $points = {}$".format(sigma, len(gau_x)))
+                    # # Add legend to plot
+                    # ax.legend(loc='upper left')
+                    # #pyplt.show()
+                    # pyplt.savefig('data/processed_data_files/tensile/' + file_name + '_gau.png')
+
+                    '''add a new column for the smoothed data y_avg from the window 35'''
+                    data.insert(3,'Smoothed_Force',y_avg[5])
+                    #print(data.head())
+
+                    '''Apply the smoothed force data for the rest of the analysis'''
                     '''Stress calculation'''
-                    data['Stress'] = data['Force'] / area
+                    data['Stress'] = data['Smoothed_Force'] / area
                     '''Calculate UTS'''
                     max_stress = round(data['Stress'].max(), 2)
 
@@ -177,7 +220,7 @@ for i in range(0, 3):
 
                     # tccurvedata.to_excel('data/'+file_name+'_tccurve.xls')
 
-                    '''Remove negative values in Strain_y column.  This will create NaN values that we will cleanup 
+                    '''Remove negative values in Strain_y column.  Thiw will create NaN values that we will cleanup 
                     in the next step'''
                     tccurvedata['TCStress'] = tccurvedata['TCStress'][tccurvedata['TCStress'] >= 0]
 
@@ -215,16 +258,18 @@ for i in range(0, 3):
                     pyplt.clf()
 
                     '''stress v. strain curve'''
-                    pyplt.plot(tccurvedata['TCStrain'], tccurvedata['TCStress'],'.r')
-                    pyplt.show()
+                    pyplt.plot(tccurvedata['TCStrain'], tccurvedata['TCStress'])
+                    pyplt.xlabel('Strain (mm/mm)')
+                    pyplt.ylabel('Stress (MPa)')
+                    #pyplt.show()
                     '''elastic modulus line'''
-                    pyplt.plot(tccurvedata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
+                    #pyplt.plot(tccurvedata.iloc[0:800]['TCStrain'], tc_y_plot, color='r')
                     #pyplt.show()
                     '''plotting the offset line'''
-                    pyplt.plot(tccurvedata.iloc[0:1800]['offset_strain'], tccurvedata.iloc[0:1800]['offset_stress'],
-                             color='y')
+                    #pyplt.plot(tccurvedata.iloc[0:1800]['offset_strain'], tccurvedata.iloc[0:1800]['offset_stress'],
+                    #         color='y')
                     #pyplt.show()
-                    #pyplt.savefig('data/processed_data_files/' + file_name + '.png')
+                    #pyplt.savefig('data/processed_data_files/tensile/' + file_name + '.png')
 
                     #plt.show()
 
@@ -245,14 +290,15 @@ for i in range(0, 3):
                     #print(offset.iloc[400:405])
                     yield_stress = round(offset.iloc[offset['error'].idxmin()]['Stress'], 2)
                     yield_strain = round(offset.iloc[offset['error'].idxmin()]['TCStrain'], 4)
-                    '''change the data from being a string to a float datatype'''
+                    '''calculate tensile data parameters from determined values'''
                     strain_hardening_ratio = round(max_stress/yield_stress, 2)
                     modulus_toughness = round(((yield_stress+max_stress)*yield_strain/2)-
                                               ((((yield_stress+max_stress)/2)**2)/(2*elastic)), 2)
+                    '''place all tensile parameters in a table'''
                     Tensile = Tensile + str(file_name) + '\t' + str(dose) + '\t' + str(max_stress) + '\t' + \
                               str(elastic) + '\t' + str(yield_stress) + '\t' + str(yield_strain) + '\t' + \
                               str(strain_hardening_ratio) + '\t' + str(modulus_toughness) + '\n'
-                   # offsetdata.to_excel('data/processed_data_files/tensile/' + file_name + '.xlsx')
+                    #offsetdata.to_excel('data/processed_data_files/tensile/' + file_name + '.xlsx')
             True
 
 print(Tensile)

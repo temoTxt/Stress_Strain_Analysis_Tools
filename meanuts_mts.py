@@ -1,15 +1,14 @@
 import pandas as pd
 import re
-import csv
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pyplt
 import os
-import openpyxl
-from openpyxl import Workbook, load_workbook
+import numpy as np
+
 
 Tensile = 'File Name \t dose \t UTS (MPa) \t Stress at Failure (MPa) \t Strain at Failure (mm/mm) \n'
 '''get file locations of the raw .dat file'''
-for i in range(0, 4):
-    thickness = ['3.3302_', '1.27_', '0.2540_', '15.49_']
+for i in range(0, 3):
+    thickness = ['0.2540_', '1.27_', '3.3302_']
     file_front = 'data/' + str(thickness[i])
     # print(file_front)
     for j in range(0, 7):
@@ -18,12 +17,15 @@ for i in range(0, 4):
         # print(file_middle)
         for replicates in range(1, 13):
             file = file_middle + str(replicates) + ').dat'
-            # print(file)
+            #print(file)
             split_filename = file.split('_')
             dose = split_filename[1]
             layer = split_filename[0]
             split_layer = layer.split('/')
             layer_thickness = split_layer[1]
+            #print(layer)
+            #print(layer_thickness)
+            #print(dose)
 
             # print('The '+str(specimen_type)+' cross-sectional area is', area, ' mm2')
             # print('The '+str(specimen_type)+' gage length is', g_len, ' mm')
@@ -76,6 +78,27 @@ for i in range(0, 4):
                     '''change the data from being a string to a float datatype'''
                     data = data.astype(float)
 
+                    '''Trying a guassian window for data smoothing'''
+                    gaussian_func = lambda x, sigma: 1 / np.sqrt(2 * np.pi * sigma ** 2) * np.exp(
+                        -(x ** 2) / (2 * sigma ** 2))
+                    fig, ax = pyplt.subplots()
+                    # Compute moving averages using different window sizes
+                    sigma_lst = [1, 2, 3, 5, 8, 10]
+                    y_gau = np.zeros((len(sigma_lst), len(data['Displacement'])))
+                    for j, sigma in enumerate(sigma_lst):
+                        gau_x = np.linspace(-2.7 * sigma, 2.7 * sigma, 6 * sigma)
+                        gau_mask = gaussian_func(gau_x, sigma)
+                        y_gau[j, :] = np.convolve(data['Force'], gau_mask, 'same')
+                        ax.plot(data['Displacement'], y_gau[j, :] + (j + 1) * 50,
+                                label=r"$\sigma = {}$, $points = {}$".format(sigma, len(gau_x)))
+                    # Add legend to plot
+                    ax.legend(loc='upper left')
+                    # pyplt.show()
+                    #pyplt.savefig('data/processed_data_files/tensile/' + file_name + '_gau.png')
+                    pyplt.close()
+                    '''add a new column for the smoothed data y_avg from the window 35'''
+                    data.insert(3, 'Smoothed_Force', y_gau[5])
+
                     '''gauge length'''
                     g_len = 25  # mm
                     # select the correct cross sectional area for specimen based on thickness
@@ -108,13 +131,13 @@ for i in range(0, 4):
                     '''calculating UTS, stress at break, strain at break, and strain at UTS'''
                     '''Calculate UTS'''
                     max_stress = round(data['Stress'].max(), 2)
-                    # print('The UTS for ', '"', file_name, '" is ', max_stress,' MPa.')
+                    #print('The UTS for ', '"', file_name, '" is ', max_stress,' MPa.')
                     '''delete all the negative values in the data for strain and stress'''
                     data['Stress_nonneg'] = data['Stress'][data['Stress'] >= 0]
                     data['Strain_nonneg'] = data['Strain'][data['Strain'] >= 0]
                     '''Drop all the NaN values'''
                     data = data.dropna(axis='rows', how='any')
-                    # print(data['Stress_nonneg'])
+                    #print(data['Stress_nonneg'])
                     '''Find the Strain at break'''
                     strain_break = round(data['Strain_nonneg'].max(), 4)
                     stress_break = round(data['Stress_nonneg'].iloc[-2], 2)
@@ -128,5 +151,5 @@ for i in range(0, 4):
             True
 
 print(Tensile)
-tensile_data = open('data/1.27_0MGy_meanuts_output.txt', 'r+')
-tensile_data.writelines(Tensile)
+#tensile_data = open('data/1.27_0MGy_meanuts_output.txt', 'r+')
+#tensile_data.writelines(Tensile)
