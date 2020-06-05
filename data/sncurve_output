@@ -11,6 +11,18 @@ File Name 	 Max Cycles
 0.2540_solid_4545_typei_65%uts_0.25hz_r(1)	1872.0
 0.2540_solid_4545_typei_65%uts_0.25hz_r(2)	3180.0
 0.2540_solid_4545_typei_65%uts_0.25hz_r(3)	5678.0
+0.2540_solid_4545_d3039_95%uts_0.25hz_r(1)	907.0
+0.2540_solid_4545_d3039_95%uts_0.25hz_r(2)	1369.0
+0.2540_solid_4545_d3039_95%uts_0.25hz_r(3)	1947.0
+0.2540_solid_4545_d3039_85%uts_0.25hz_r(1)	2235.0
+0.2540_solid_4545_d3039_85%uts_0.25hz_r(2)	4031.0
+0.2540_solid_4545_d3039_85%uts_0.25hz_r(3)	3131.0
+0.2540_solid_4545_d3039_75%uts_0.25hz_r(1)	5037.0
+0.2540_solid_4545_d3039_75%uts_0.25hz_r(2)	6765.0
+0.2540_solid_4545_d3039_75%uts_0.25hz_r(3)	5221.0
+0.2540_solid_4545_d3039_65%uts_0.25hz_r(1)	15251.0
+0.2540_solid_4545_d3039_65%uts_0.25hz_r(2)	13323.0
+0.2540_solid_4545_d3039_65%uts_0.25hz_r(3)	13183.0
 0.3302_solid_4545_typei_95%uts_0.25hz_r(1)	80.0
 0.3302_solid_4545_typei_95%uts_0.25hz_r(2)	636.0
 0.3302_solid_4545_typei_95%uts_0.25hz_r(3)	102.0
@@ -20,6 +32,9 @@ File Name 	 Max Cycles
 0.3302_solid_4545_typei_75%uts_0.25hz_r(1)	876.0
 0.3302_solid_4545_typei_75%uts_0.25hz_r(2)	786.0
 0.3302_solid_4545_typei_75%uts_0.25hz_r(3)	992.0
+0.3302_solid_4545_typei_65%uts_0.25hz_r(1)	1997.0
+0.3302_solid_4545_typei_65%uts_0.25hz_r(2)	1830.0
+0.3302_solid_4545_typei_65%uts_0.25hz_r(3)	1947.0
 0.2540_hd_4545_typei_95%uts_0.25hz_r(1)	84.0
 0.2540_hd_4545_typei_95%uts_0.25hz_r(2)	168.0
 0.2540_hd_4545_typei_95%uts_0.25hz_r(3)	330.0
@@ -32,6 +47,18 @@ File Name 	 Max Cycles
 0.2540_hd_4545_typei_65%uts_0.25hz_r(1)	2721.0
 0.2540_hd_4545_typei_65%uts_0.25hz_r(2)	2790.0
 0.2540_hd_4545_typei_65%uts_0.25hz_r(3)	2138.0
+0.2540_hd_4545_d3039_95%uts_0.25hz_r(1)	1007.0
+0.2540_hd_4545_d3039_95%uts_0.25hz_r(2)	1071.0
+0.2540_hd_4545_d3039_95%uts_0.25hz_r(3)	729.0
+0.2540_hd_4545_d3039_85%uts_0.25hz_r(1)	1989.0
+0.2540_hd_4545_d3039_85%uts_0.25hz_r(2)	1807.0
+0.2540_hd_4545_d3039_85%uts_0.25hz_r(3)	1877.0
+0.2540_hd_4545_d3039_75%uts_0.25hz_r(1)	4307.0
+0.2540_hd_4545_d3039_75%uts_0.25hz_r(2)	3935.0
+0.2540_hd_4545_d3039_75%uts_0.25hz_r(3)	4533.0
+0.2540_hd_4545_d3039_65%uts_0.25hz_r(1)	5527.0
+0.2540_hd_4545_d3039_65%uts_0.25hz_r(2)	7873.0
+0.2540_hd_4545_d3039_65%uts_0.25hz_r(3)	15952.0
 0.3302_hd_4545_typei_95%uts_0.25hz_r(1)	330.0
 0.3302_hd_4545_typei_95%uts_0.25hz_r(2)	78.0
 0.3302_hd_4545_typei_95%uts_0.25hz_r(3)	68.0
@@ -44,31 +71,10 @@ File Name 	 Max Cycles
 0.3302_hd_4545_typei_65%uts_0.25hz_r(1)	2402.0
 0.3302_hd_4545_typei_65%uts_0.25hz_r(2)	3296.0
 0.3302_hd_4545_typei_65%uts_0.25hz_r(3)	3004.0
-277890408946
-low_high_090_typei_monotonic_r(20)	22.99	735.9391957651306
-577
-0.254_solid_dimension_typei_090_r(4)	dimension	865.6979362740989
-0.254_solid_dimension_typei_090_r(5)	dimension	866.8641686636759
-0.254_solid_dimension_typei_090_r(6)	dimension	863.1560496138184
-0.254_solid_dimension_typeiv_4545_r(1)	dimension	878.1278575567268
-0.254_solid_dimension_typeiv_4545_r(2)	dimension	876.3674165541237
-0.254_solid_dimension_typeiv_4545_r(3)	dimension	828.8402717364462
-0.254_solid_dimension_typeiv_4545_r(4)	dimension	809.1998280831914
-0.254_solid_dimension_typeiv_4545_r(5)	dimension	828.2649909211315
-0.254_solid_dimension_typeiv_090_r(1)	dimension	717.6189330221175
-0.254_solid_dimension_typeiv_090_r(2)	dimension	710.9868897242363
-0.254_solid_dimension_typeiv_090_r(3)	dimension	723.9881057428536
-0.254_solid_dimension_typeiv_090_r(4)	dimension	780.7126790208231
-0.254_solid_dimension_typeiv_090_r(5)	dimension	739.3526549347529
-0.254_solid_dimension_typeiv_090_r(6)	dimension	730.223392083382
-0.254_solid_dimension_typeiv_090_r(7)	dimension	774.2679827574782
-0.254_solid_dimension_typeiv_090_r(8)	dimension	716.4926301696
-0.254_solid_dimension_typeiv_090_r(9)	dimension	742.431548805209
-0.254_hd_uprint_typei_4545_r(1)	uprint	620.457807182841
-0.254_hd_uprint_typei_4545_r(2)	uprint	595.5804385570863
-0.254_hd_uprint_typei_4545_r(3)	uprint	597.1778198790361
-0.254_hd_uprint_typei_4545_r(4)	uprint	601.7276120991347
-0.254_hd_uprint_typei_4545_r(5)	uprint	614.665468843523
+0.3302_hd_4545_d3039_65%uts_0.25hz_r(1)	8983.0
+0.3302_hd_4545_d3039_65%uts_0.25hz_r(2)	7243.0
+0.3302_hd_4545_d3039_65%uts_0.25hz_r(3)	10959.0
+.665468843523
 0.254_hd_uprint_typei_090_r(1)	uprint	705.8238654934254
 0.254_hd_uprint_typei_090_r(2)	uprint	704.610005172664
 0.254_hd_uprint_typei_090_r(3)	uprint	691.0887684202946

@@ -77,6 +77,23 @@ for i in range(0, 3):
 
                     '''change the data from being a string to a float datatype'''
                     data = data.astype(float)
+                    data['NormalForce'] = data['Force'] - data.iloc[0]['Force']
+
+                    '''gauge length'''
+                    g_len = 25  # mm
+                    # select the correct cross sectional area for specimen based on thickness
+                    if layer_thickness in ['3.3302']:
+                        area = 6 * 3.3302  # cm^2
+
+                    elif layer_thickness in ['1.27']:
+                        area = 6 * 1.27  # cm^2
+                        '''gauge length'''
+
+                    elif layer_thickness in ['0.2540']:
+                        area = 6 * 0.2540  # cm^2
+
+                    else:
+                        area = 6 * 3.3  # cm^2
 
                     '''Trying a guassian window for data smoothing'''
                     gaussian_func = lambda x, sigma: 1 / np.sqrt(2 * np.pi * sigma ** 2) * np.exp(
@@ -88,7 +105,7 @@ for i in range(0, 3):
                     for j, sigma in enumerate(sigma_lst):
                         gau_x = np.linspace(-2.7 * sigma, 2.7 * sigma, 6 * sigma)
                         gau_mask = gaussian_func(gau_x, sigma)
-                        y_gau[j, :] = np.convolve(data['Force'], gau_mask, 'same')
+                        y_gau[j, :] = np.convolve(data['NormalForce'], gau_mask, 'same')
                         ax.plot(data['Displacement'], y_gau[j, :] + (j + 1) * 50,
                                 label=r"$\sigma = {}$, $points = {}$".format(sigma, len(gau_x)))
                     # Add legend to plot
@@ -98,27 +115,12 @@ for i in range(0, 3):
                     pyplt.close()
                     '''add a new column for the smoothed data y_avg from the window 35'''
                     data.insert(3, 'Smoothed_Force', y_gau[5])
+                    print(data.head())
 
-                    '''gauge length'''
-                    g_len = 25  # mm
-                    # select the correct cross sectional area for specimen based on thickness
-                    if layer_thickness in ['3.3302']:
-                        area = 6*3.3302  # cm^2
-
-                    elif layer_thickness in ['1.27']:
-                        area = 6*1.27  # cm^2
-                        '''gauge length'''
-
-                    elif layer_thickness in ['0.2540']:
-                        area = 6*0.2540  # cm^2
-
-                    elif layer_thickness in ['15.49']:
-                        area = 6*15.49  # cm^2
-                    else:
-                        area = 6*3.3  # cm^2
 
                     '''Stress calculation'''
-                    data['Stress'] = data['Force'] / area
+
+                    data['Stress'] = data['Smoothed_Force'] / area
 
                     '''Normalize the Displacement'''
                     data['NormalDisplacement'] = data['Displacement']-data.iloc[0]['Displacement']
