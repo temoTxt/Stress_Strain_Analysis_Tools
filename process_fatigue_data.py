@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import scipy.integrate as integrate
 
-data = pd.read_excel('/home/tmorris/ResearchReader/articles/Fatigue Data/95% UTS/0.3302 Solid/95% UTS 0.3302 Solid.xlsx', header=1)
+data = pd.read_excel('/home/tmorris/ResearchReader/articles/Fatigue Data/95% UTS/0.3302 Solid/95% UTS 0.3302 Solid.xlsx'
+                     , header=1)
 
 pos = []
 neg = []
